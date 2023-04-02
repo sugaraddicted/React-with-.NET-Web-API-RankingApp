@@ -1,5 +1,6 @@
 ﻿import React, { useState, useEffect } from 'react';
 import AlbumImageArr from './AlbumImages.js';
+import RankingGrid from './RankingGrid.js';
 
 const RankItems = () => {
 
@@ -17,6 +18,7 @@ const RankItems = () => {
     }, [])
     return (
         <main>
+        <RankingGrid items={items} imgArr={AlbumImageArr}/>
         <div className = "items-not-ranked">
             {
                (items.length > 0) ? items.map((item) =>
